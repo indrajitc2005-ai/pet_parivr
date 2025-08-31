@@ -1,0 +1,55 @@
+/* Horizontal Ring Animations - Plates around invisible pole */
+
+/* Horizontal Ring Rotation */
+@keyframes horizontalRingRotate {
+  0% { 
+    transform: rotateY(0deg); 
+  }
+  100% { 
+    transform: rotateY(360deg); 
+  }
+}
+
+/* Card flip animation */
+@keyframes cardFlip {
+  0% { transform: rotateY(0deg); }
+  100% { transform: rotateY(180deg); }
+}
+
+/* Enhanced pulse animation for flip hint */
+@keyframes flipHintPulse {
+  0%, 100% { 
+    opacity: 0.7; 
+    transform: translateX(-50%) scale(1); 
+  }
+  50% { 
+    opacity: 1; 
+    transform: translateX(-50%) scale(1.05); 
+  }
+}
+
+/* Panel hover lift animation */
+@keyframes panelLift {
+  0% { transform: translate(-50%, -50%) rotateY(var(--panel-rotation, 0deg)) translateZ(200px) scale(1); }
+  100% { transform: translate(-50%, -50%) rotateY(var(--panel-rotation, 0deg)) translateZ(250px) scale(1.1); }
+}
+
+/* Glow effect for active panels */
+@keyframes panelGlow {
+  0%, 100% { 
+    box-shadow: 
+      0 10px 30px rgba(0,0,0,.3),
+      0 0 20px rgba(120, 219, 255, 0.2);
+  }
+  50% { 
+    box-shadow: 
+      0 20px 50px rgba(0,0,0,.4),
+      0 0 40px rgba(120, 219, 255, 0.6),
+      inset 0 0 20px rgba(255,255,255,.3);
+  }
+}
+
+/* Flip hint animation override */
+.panel-front .flip-hint {
+  animation: flipHintPulse 2s infinite !important;
+}
