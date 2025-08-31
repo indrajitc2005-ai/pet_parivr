@@ -1,0 +1,32 @@
+[
+  {
+    "icon": "📸",
+    "title": "Photo Contests",
+    "description": "Share your pet's cutest moments and win amazing prizes!",
+    "info": {
+      "prize": "🏆 Monthly Prize: $500 Pet Store Credit",
+      "entries": "📊 1,247 entries this month"
+    },
+    "button": "Enter Contest"
+  },
+  {
+    "icon": "💬",
+    "title": "Pet Forums",
+    "description": "Ask questions, share tips, and connect with fellow pet lovers.",
+    "info": {
+      "members": "👥 15,432 members",
+      "discussions": "💭 2,156 discussions"
+    },
+    "button": "Join Forums"
+  },
+  {
+    "icon": "📅",
+    "title": "Local Events",
+    "description": "Find pet-friendly events and meetups in your area.",
+    "info": {
+      "next_event": "🎪 Next: Dog Park Meetup - Saturday 2PM",
+      "location": "📍 Central Park, Downtown"
+    },
+    "button": "View Events"
+  }
+]

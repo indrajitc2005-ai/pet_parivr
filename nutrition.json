@@ -1,0 +1,132 @@
+{
+  "puppies": {
+    "title": "Puppy Nutrition (0-12 months)",
+    "items": [
+      {
+        "icon": "🥩",
+        "title": "High-Quality Protein",
+        "description": "22-32% protein for muscle development"
+      },
+      {
+        "icon": "🌾",
+        "title": "Healthy Carbs",
+        "description": "Rice, sweet potato for energy"
+      },
+      {
+        "icon": "🥛",
+        "title": "Calcium & Phosphorus",
+        "description": "For strong bones and teeth"
+      },
+      {
+        "icon": "🐟",
+        "title": "Omega-3 Fatty Acids",
+        "description": "Brain and eye development"
+      }
+    ],
+    "button": "Get Puppy Diet Plan"
+  },
+  "adult-dogs": {
+    "title": "Adult Dog Nutrition (1-7 years)",
+    "items": [
+      {
+        "icon": "🥩",
+        "title": "Lean Protein",
+        "description": "18-25% protein for maintenance"
+      },
+      {
+        "icon": "🌾",
+        "title": "Fiber-Rich Carbs",
+        "description": "For digestive health"
+      },
+      {
+        "icon": "🦴",
+        "title": "Joint Support",
+        "description": "Glucosamine and chondroitin"
+      },
+      {
+        "icon": "🐟",
+        "title": "Omega-6 Fatty Acids",
+        "description": "For healthy skin and coat"
+      }
+    ],
+    "button": "Get Adult Dog Diet Plan"
+  },
+  "kittens": {
+    "title": "Kitten Nutrition (0-12 months)",
+    "items": [
+      {
+        "icon": "🥩",
+        "title": "High-Quality Protein",
+        "description": "30-40% protein for growth"
+      },
+      {
+        "icon": " taurine",
+        "title": "Taurine",
+        "description": "Essential for heart and eye health"
+      },
+      {
+        "icon": "🥛",
+        "title": "DHA",
+        "description": "For brain development"
+      },
+      {
+        "icon": "🐟",
+        "title": "Arachidonic Acid",
+        "description": "An essential fatty acid for cats"
+      }
+    ],
+    "button": "Get Kitten Diet Plan"
+  },
+  "adult-cats": {
+    "title": "Adult Cat Nutrition (1-7 years)",
+    "items": [
+      {
+        "icon": "🥩",
+        "title": "Animal-Based Protein",
+        "description": "26-40% protein for maintenance"
+      },
+      {
+        "icon": "💧",
+        "title": "Moisture-Rich Food",
+        "description": "To support urinary tract health"
+      },
+      {
+        "icon": "🧶",
+        "title": "Hairball Control",
+        "description": "Fiber to help pass hair"
+      },
+      {
+        "icon": "🐟",
+        "title": "Omega-3 & 6 Fatty Acids",
+        "description": "For a shiny coat"
+      }
+    ],
+    "button": "Get Adult Cat Diet Plan"
+  },
+  "senior": {
+    "title": "Senior Pet Nutrition (7+ years)",
+    "items": [
+      {
+        "icon": "🥩",
+        "title": "Controlled Protein",
+        "description": "To support aging kidneys"
+      },
+      {
+        "icon": "🦴",
+        "title": "Joint Support",
+        "description": "Glucosamine, chondroitin, and MSM"
+      },
+      {
+        "icon": "🧠",
+        "title": "Antioxidants",
+        "description": "To support cognitive function"
+      },
+      {
+        "icon": "⚖️",
+        "title": "Weight Management",
+        "description": "Fewer calories to prevent obesity"
+      }
+    ],
+    "button": "Get Senior Pet Diet Plan"
+  }
+}

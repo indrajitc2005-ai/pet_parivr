@@ -1,0 +1,41 @@
+[
+  {
+    "urgency": "urgent",
+    "icon": "🆘",
+    "title": "Immediate Emergency",
+    "items": [
+      "Difficulty breathing",
+      "Unconsciousness",
+      "Severe bleeding",
+      "Suspected poisoning",
+      "Seizures"
+    ],
+    "button": "Call Emergency Vet"
+  },
+  {
+    "urgency": "warning",
+    "icon": "⚠️",
+    "title": "Urgent Care Needed",
+    "items": [
+      "Vomiting repeatedly",
+      "Not eating for 24+ hours",
+      "Limping or pain",
+      "Eye injuries",
+      "Diarrhea with blood"
+    ],
+    "button": "Schedule Urgent Visit"
+  },
+  {
+    "urgency": "info",
+    "icon": "ℹ️",
+    "title": "Monitor & Call",
+    "items": [
+      "Mild vomiting",
+      "Slight lethargy",
+      "Minor cuts",
+      "Mild diarrhea",
+      "Excessive scratching"
+    ],
+    "button": "Consult Online"
+  }
+]

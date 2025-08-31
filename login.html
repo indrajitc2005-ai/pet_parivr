@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Furry Tails – Login</title>
+  <link rel="stylesheet" href="css/base.css"><link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css"><link rel="stylesheet" href="css/chatbot.css">
+  <link rel="stylesheet" href="css/preloader.css">
+</head>
+<body>
+  <!-- Futuristic Preloader -->
+  <div id="preloader">
+    <div class="loader-box">
+      <div class="loader-circle"></div>
+      <h2>Booting Furry Tails...</h2>
+      <div class="progress-bar"><span></span></div>
+      <p class="loading-text">Initializing modules...</p>
+    </div>
+  </div>
+  <script>
+  window.addEventListener('load', function(){
+    let preloader = document.getElementById("preloader");
+    preloader.style.opacity = "0";
+    setTimeout(() => {
+      preloader.style.visibility = "hidden";
+    }, 800); // wait for fade-out
+  });
+  </script>
+  <nav class="navbar">
+    <div class="container nav-inner">
+      <a class="brand" href="index.html"><div class="logo">🐾</div><div>Furry Tails</div></a>
+      <div class="nav-links">
+        <a href="pharmacy.html">Pharmacy</a><a href="grooming.html">Grooming & Accessories</a>
+        <a href="toys.html">Toys</a><a href="consult.html">Consult a Doctor</a><a href="about.html">About Us</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="auth-wrap">
+    <div class="auth-card">
+      <div class="auth-visual">
+        <h2>Welcome back 🐾</h2>
+        <p style="color:var(--muted)">Access your orders, prescriptions and appointments.</p>
+        <div class="zipper" style="margin-top:16px">
+          <div class="left" style="--split:40%"></div>
+          <div class="right"></div>
+          <div class="handle"><div class="pull"></div></div>
+          <input type="range" min="0" max="100" value="40"/>
+        </div>
+      </div>
+      <form class="auth-form" id="loginForm">
+        <h3>Login</h3>
+        <label class="field">Email
+          <input class="input" type="email" required placeholder="you@example.com">
+        </label>
+        <label class="field">Password
+          <input class="input" type="password" required placeholder="••••••••">
+        </label>
+        <div class="inline">
+          <label><input type="checkbox"> Remember me</label>
+          <a class="link" href="#">Forgot password?</a>
+        </div>
+        <div class="inline" style="margin-top:12px">
+          <button class="btn" type="submit">Login</button>
+          <a class="btn ghost" href="signup.html">Create account</a>
+        </div>
+        <div id="loginMsg" style="margin-top:10px; color:var(--muted)"></div>
+      </form>
+    </div>
+  </main>
+
+  <footer>© <span id="year"></span> Furry Tails</footer>
+
+  <!-- AI Chatbot -->
+  <button class="bot-toggle" id="botToggle">💬 Ask Furry AI</button>
+  <section class="bot" id="bot">
+    <header>
+      <strong>Furry AI Assistant</strong>
+      <button id="closeBot" class="tag">✕</button>
+    </header>
+    <div class="msgs" id="msgs"></div>
+    <div class="input">
+      <button class="history-btn" id="historyBtn" title="Chat History">📚</button>
+      <button class="voice-btn" id="voiceBtn" title="Voice Input">🎤</button>
+      <input id="botInput" placeholder="Ask about pharmacy, appointments, grooming…"/>
+      <button id="botSend">Send</button>
+    </div>
+  </section>
+
+  <script src="js/app.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/chatbot.js"></script>
+</body>
+</html>

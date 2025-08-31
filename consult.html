@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Furry Tails – Consult a Doctor</title>
+  <link rel="stylesheet" href="css/base.css"><link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css"><link rel="stylesheet" href="css/chatbot.css">
+  <link rel="stylesheet" href="css/preloader.css">
+</head>
+<body>
+  <!-- Futuristic Preloader -->
+  <div id="preloader">
+    <div class="loader-box">
+      <div class="loader-circle"></div>
+      <h2>Booting Furry Tails...</h2>
+      <div class="progress-bar"><span></span></div>
+      <p class="loading-text">Initializing modules...</p>
+    </div>
+  </div>
+  <script>
+  window.addEventListener('load', function(){
+    let preloader = document.getElementById("preloader");
+    preloader.style.opacity = "0";
+    setTimeout(() => {
+      preloader.style.visibility = "hidden";
+    }, 800); // wait for fade-out
+  });
+  </script>
+  <nav class="navbar">
+    <div class="container nav-inner">
+      <a class="brand" href="index.html"><div class="logo">🐾</div><div>Furry Tails</div></a>
+      <div class="nav-links">
+        <a href="pharmacy.html">Pharmacy</a><a href="grooming.html">Grooming & Accessories</a>
+        <a href="toys.html">Toys</a><a href="consult.html">Consult a Doctor</a><a href="about.html">About Us</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container">
+    <section class="hero">
+      <h1>Consult a Doctor</h1>
+      <p>Book a private, secure video consultation.</p>
+    </section>
+    <section class="grid">
+      <article class="card large">
+        <div class="art"></div>
+        <h3>How it works</h3>
+        <p>Choose a time slot → pay → join secure room. No contact sharing.</p>
+      </article>
+      <article class="card">
+        <div class="art"></div>
+        <h3>Available today</h3>
+        <p>3 vets online now. Average wait: 8 minutes.</p>
+      </article>
+      <article class="card">
+        <div class="art"></div>
+        <h3>Emergency</h3>
+        <p>Hotline: +91-00000-00000</p>
+      </article>
+    </section>
+  </main>
+
+  <footer>© <span id="year"></span> Furry Tails</footer>
+
+  <button class="bot-toggle" id="botToggle">💬 Ask Furry AI</button>
+  <section class="bot" id="bot">
+    <header><strong>Furry AI Assistant</strong><button id="closeBot" class="tag">✕</button></header>
+    <div class="msgs" id="msgs"></div>
+    <div class="input">
+      <button class="history-btn" id="historyBtn" title="Chat History">📚</button>
+      <button class="voice-btn" id="voiceBtn" title="Voice Input">🎤</button>
+      <input id="botInput" placeholder="Ask about appointments, timing…"/>
+      <button id="botSend">Send</button>
+    </div>
+  </section>
+
+  <script src="js/app.js"></script>
+  <script src="js/chatbot.js"></script>
+</body>
+</html>

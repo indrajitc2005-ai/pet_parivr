@@ -1,0 +1,11 @@
+[
+  {"id":1,"name":"Anti-tick Shampoo","price":399,"img":"https://picsum.photos/400/240?random=21","category":"pharmacy"},
+  {"id":2,"name":"Omega-3 Supplement","price":549,"img":"https://picsum.photos/400/240?random=22","category":"pharmacy"},
+  {"id":3,"name":"Pain Relief Tabs","price":299,"img":"https://picsum.photos/400/240?random=23","category":"pharmacy"},
+  {"id":4,"name":"Nail Trimmer","price":249,"img":"https://picsum.photos/400/240?random=24","category":"grooming"},
+  {"id":5,"name":"Fur Brush","price":199,"img":"https://picsum.photos/400/240?random=25","category":"grooming"},
+  {"id":6,"name":"Bow Collar","price":149,"img":"https://picsum.photos/400/240?random=26","category":"grooming"},
+  {"id":7,"name":"Chew Bone","price":129,"img":"https://picsum.photos/400/240?random=27","category":"toys"},
+  {"id":8,"name":"Tennis Ball 3-pack","price":169,"img":"https://picsum.photos/400/240?random=28","category":"toys"},
+  {"id":9,"name":"Feather Wand","price":139,"img":"https://picsum.photos/400/240?random=29","category":"toys"}
+]

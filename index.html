@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Furry Tails – Home</title>
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/chatbot.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/preloader.css">
+  <link rel="stylesheet" href="css/scroll-frames.css">
+  <link rel="stylesheet" href="css/new-sections.css">
+  <link rel="stylesheet" href="css/advanced-features.css">
+  
+  <!-- PWA Manifest -->
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#78dbff">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Furry Tails">
+  <link rel="apple-touch-icon" href="icon-192x192.png">
+</head>
+<body>
+  <!-- Futuristic Preloader -->
+  <div id="preloader">
+    <!-- Original Loading UI (appears first for 0.3s) -->
+    <div class="loader-box">
+      <div class="loader-circle">
+        <div class="spin-element" style="top: 10px; left: 50%;"></div>
+        <div class="spin-element" style="top: 50%; right: 10px;"></div>
+        <div class="spin-element" style="bottom: 10px; left: 50%;"></div>
+        <div class="spin-element" style="top: 50%; left: 10px;"></div>
+      </div>
+      <h2>Initializing Furry Tails...</h2>
+      <div class="progress-bar"><span></span></div>
+      <p class="loading-text">Loading modules...</p>
+      <p class="ai-status" style="color: var(--accent); margin-top: 8px; font-size: 0.9rem;">Booting AI Knowledge Base...</p>
+    </div>
+    
+    <!-- Pet Image Animation (emerges from center after 0.3s) -->
+    <div class="pet-image-container">
+      <div class="pet-image" role="img" aria-label="A cute pet looking at the screen."></div>
+      <div class="particles">
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+      </div>
+    </div>
+  </div>
+  
+  
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container nav-inner">
+      <a class="brand" href="index.html"><div class="logo">🐾</div><div>Furry Tails</div></a>
+      <div class="nav-links">
+        <a href="pharmacy.html">Pharmacy</a>
+        <a href="grooming.html">Grooming & Accessories</a>
+        <a href="toys.html">Toys</a>
+        <a href="consult.html">Consult a Doctor</a>
+        <a href="about.html">About Us</a>
+        <a class="tag" href="login.html">Login</a>
+        <a class="tag" href="signup.html">Sign Up</a>
+      </div>
+      <button class="mobile-menu-btn">☰</button>
+    </div>
+  </nav>
+
+  <div class="mobile-menu">
+    <div class="mobile-menu-header">
+      <a class="brand" href="index.html"><div class="logo">🐾</div><div>Furry Tails</div></a>
+      <button class="mobile-menu-close">✕</button>
+    </div>
+    <div class="mobile-nav-links">
+      <a href="pharmacy.html">Pharmacy</a>
+      <a href="grooming.html">Grooming & Accessories</a>
+      <a href="toys.html">Toys</a>
+      <a href="consult.html">Consult a Doctor</a>
+      <a href="about.html">About Us</a>
+      <a class="tag" href="login.html">Login</a>
+      <a class="tag" href="signup.html">Sign Up</a>
+    </div>
+  </div>
+
+  <main class="container">
+    <!-- Hero -->
+    <section class="hero">
+      <h1>Futuristic pet care for happy tails</h1>
+      <p>Shop pharmacy, accessories & toys. Book secure doctor consults without sharing contacts.</p>
+      <div style="display:flex; gap:10px; margin-top:6px">
+        <a class="btn" href="consult.html">Consult a Doctor</a>
+        <a class="btn ghost" href="pharmacy.html">Explore Pharmacy</a>
+      </div>
+    </section>
+
+    <!-- Animated Pet Scene -->
+    <section class="pet-scene-container scroll-animate">
+      <div class="pet-scene">
+        <div class="pet-character cat-character"></div>
+        <div class="pet-character dog-character"></div>
+        <div class="toy ball-toy"></div>
+        <div class="toy bone-toy"></div>
+      </div>
+    </section>
+
+    <!-- 3D Modular Cards -->
+    <section class="grid" id="cards">
+      <article class="card">
+        <span class="pill">Real-time</span>
+        <div class="art float"></div>
+        <h3>Consult a Doctor</h3>
+        <p>Peer-to-peer video consults without sharing phone numbers.</p>
+      </article>
+      <article class="card large">
+        <span class="pill">Deals</span>
+        <div class="art float"></div>
+        <h3>Pharmacy</h3>
+        <p>Verified meds. Same-day delivery in select areas.</p>
+      </article>
+      <article class="card">
+        <span class="pill">New</span>
+        <div class="art float"></div>
+        <h3>Grooming & Accessories</h3>
+        <p>Clean, comfy and stylish gear your pet will love.</p>
+      </article>
+    </section>
+
+    <!-- Before/After Zipper -->
+    <section style="margin-top:24px">
+      <h2>Before/After Grooming</h2>
+      <div class="zipper" id="zipper">
+        <div class="left"></div>
+        <div class="right"></div>
+        <div class="handle"><div class="pull"></div></div>
+        <input type="range" min="0" max="100" value="50" aria-label="Compare before/after" />
+        <div class="label">Slide to compare ↔</div>
+      </div>
+    </section>
+
+    <!-- Revolving Product View -->
+    <section style="margin-top:24px">
+      <h2>Featured Products</h2>
+      <p style="color:var(--muted); margin-top:4px">Auto-rotating product showcase</p>
+      <div class="ring-wrap">
+        <div class="ring" id="ring">
+          <div class="panel" style="transform: rotateY(0deg) translateZ(380px);">
+            <div class="thumb" style="background-image:url('https://picsum.photos/400/240?random=1')" role="img" aria-label="Laser Teaser"></div>
+            <div class="meta">Laser Teaser</div>
+          </div>
+          <div class="panel" style="transform: rotateY(60deg) translateZ(380px);">
+            <div class="thumb" style="background-image:url('https://picsum.photos/400/240?random=2')" role="img" aria-label="Chew Bone"></div>
+            <div class="meta">Chew Bone</div>
+          </div>
+          <div class="panel" style="transform: rotateY(120deg) translateZ(380px);">
+            <div class="thumb" style="background-image:url('https://picsum.photos/400/240?random=3')" role="img" aria-label="Plush Mouse"></div>
+            <div class="meta">Plush Mouse</div>
+          </div>
+          <div class="panel" style="transform: rotateY(180deg) translateZ(380px);">
+            <div class="thumb" style="background-image:url('https://picsum.photos/400/240?random=4')" role="img" aria-label="Fetch Ball"></div>
+            <div class="meta">Fetch Ball</div>
+          </div>
+          <div class="panel" style="transform: rotateY(240deg) translateZ(380px);">
+            <div class="thumb" style="background-image:url('https://picsum.photos/400/240?random=5')" role="img" aria-label="Feather Wand"></div>
+            <div class="meta">Feather Wand</div>
+          </div>
+          <div class="panel" style="transform: rotateY(300deg) translateZ(380px);">
+            <div class="thumb" style="background-image:url('https://picsum.photos/400/240?random=6')" role="img" aria-label="Scratching Post"></div>
+            <div class="meta">Scratching Post</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Latest Products -->
+    <section style="margin-top:24px">
+      <h2>Latest Products</h2>
+      <p style="color:var(--muted); margin-top:4px">Fresh arrivals with zippy animations.</p>
+      <div class="products-row" id="latestRow"></div>
+    </section>
+
+    <!-- Pet Care Services -->
+    <section style="margin-top:40px">
+      <h2>🏥 Professional Pet Care Services</h2>
+      <p style="color:var(--muted); margin-top:4px">Comprehensive care for your furry family members</p>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">🩺</div>
+          <h3>Health Checkups</h3>
+          <p>Regular health monitoring and preventive care for optimal pet wellness.</p>
+          <div class="service-features">
+            <span class="feature">✓ Full body examination</span>
+            <span class="feature">✓ Vaccination updates</span>
+            <span class="feature">✓ Health reports</span>
+          </div>
+          <button class="btn">Book Checkup</button>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">✂️</div>
+          <h3>Professional Grooming</h3>
+          <p>Expert grooming services to keep your pet looking and feeling their best.</p>
+          <div class="service-features">
+            <span class="feature">✓ Nail trimming</span>
+            <span class="feature">✓ Fur styling</span>
+            <span class="feature">✓ Spa treatments</span>
+          </div>
+          <button class="btn">Schedule Grooming</button>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🏠</div>
+          <h3>Pet Boarding</h3>
+          <p>Safe and comfortable boarding facilities when you're away from home.</p>
+          <div class="service-features">
+            <span class="feature">✓ 24/7 supervision</span>
+            <span class="feature">✓ Play activities</span>
+            <span class="feature">✓ Daily updates</span>
+          </div>
+          <button class="btn">Reserve Spot</button>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🎓</div>
+          <h3>Training Programs</h3>
+          <p>Professional training to help your pet develop good behaviors and skills.</p>
+          <div class="service-features">
+            <span class="feature">✓ Basic obedience</span>
+            <span class="feature">✓ Behavioral correction</span>
+            <span class="feature">✓ Advanced tricks</span>
+          </div>
+          <button class="btn">Start Training</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pet Nutrition Guide -->
+    <section style="margin-top:40px">
+      <h2>🥘 Nutrition & Diet Plans</h2>
+      <p style="color:var(--muted); margin-top:4px">Customized nutrition plans for different pet types and ages</p>
+      <div class="nutrition-tabs">
+        <div class="tab-buttons">
+          <button class="tab-btn active" data-tab="puppies">🐶 Puppies</button>
+          <button class="tab-btn" data-tab="adult-dogs">🐕 Adult Dogs</button>
+          <button class="tab-btn" data-tab="kittens">🐱 Kittens</button>
+          <button class="tab-btn" data-tab="adult-cats">🐈 Adult Cats</button>
+          <button class="tab-btn" data-tab="senior">👴 Senior Pets</button>
+        </div>
+        <div class="tab-content">
+          <div class="tab-panel active" id="puppies">
+            <div class="nutrition-card">
+              <h3>Puppy Nutrition (0-12 months)</h3>
+              <div class="nutrition-grid">
+                <div class="nutrition-item">
+                  <span class="nutrition-icon">🥩</span>
+                  <div>
+                    <h4>High-Quality Protein</h4>
+                    <p>22-32% protein for muscle development</p>
+                  </div>
+                </div>
+                <div class="nutrition-item">
+                  <span class="nutrition-icon">🌾</span>
+                  <div>
+                    <h4>Healthy Carbs</h4>
+                    <p>Rice, sweet potato for energy</p>
+                  </div>
+                </div>
+                <div class="nutrition-item">
+                  <span class="nutrition-icon">🥛</span>
+                  <div>
+                    <h4>Calcium & Phosphorus</h4>
+                    <p>For strong bones and teeth</p>
+                  </div>
+                </div>
+                <div class="nutrition-item">
+                  <span class="nutrition-icon">🐟</span>
+                  <div>
+                    <h4>Omega-3 Fatty Acids</h4>
+                    <p>Brain and eye development</p>
+                  </div>
+                </div>
+              </div>
+              <button class="btn">Get Puppy Diet Plan</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pet Emergency Guide -->
+    <section style="margin-top:40px">
+      <h2>🚨 Emergency Pet Care Guide</h2>
+      <p style="color:var(--muted); margin-top:4px">Quick reference for common pet emergencies</p>
+      <div class="emergency-grid">
+        <div class="emergency-card urgent">
+          <div class="emergency-header">
+            <span class="emergency-icon">🆘</span>
+            <h3>Immediate Emergency</h3>
+          </div>
+          <ul class="emergency-list">
+            <li>Difficulty breathing</li>
+            <li>Unconsciousness</li>
+            <li>Severe bleeding</li>
+            <li>Suspected poisoning</li>
+            <li>Seizures</li>
+          </ul>
+          <button class="btn emergency-btn">Call Emergency Vet</button>
+        </div>
+        <div class="emergency-card warning">
+          <div class="emergency-header">
+            <span class="emergency-icon">⚠️</span>
+            <h3>Urgent Care Needed</h3>
+          </div>
+          <ul class="emergency-list">
+            <li>Vomiting repeatedly</li>
+            <li>Not eating for 24+ hours</li>
+            <li>Limping or pain</li>
+            <li>Eye injuries</li>
+            <li>Diarrhea with blood</li>
+          </ul>
+          <button class="btn">Schedule Urgent Visit</button>
+        </div>
+        <div class="emergency-card info">
+          <div class="emergency-header">
+            <span class="emergency-icon">ℹ️</span>
+            <h3>Monitor & Call</h3>
+          </div>
+          <ul class="emergency-list">
+            <li>Mild vomiting</li>
+            <li>Slight lethargy</li>
+            <li>Minor cuts</li>
+            <li>Mild diarrhea</li>
+            <li>Excessive scratching</li>
+          </ul>
+          <button class="btn ghost">Consult Online</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pet Wellness Tips -->
+    <section style="margin-top:40px">
+      <h2>💡 Daily Pet Wellness Tips</h2>
+      <p style="color:var(--muted); margin-top:4px">Simple tips to keep your pet healthy and happy</p>
+      <div class="tips-carousel">
+        <div class="tip-card active">
+          <div class="tip-number">01</div>
+          <h3>Daily Exercise</h3>
+          <p>Ensure your pet gets adequate physical activity based on their breed and age. Dogs need 30 minutes to 2 hours daily, while cats benefit from 10-15 minutes of active play.</p>
+          <div class="tip-tags">
+            <span class="tip-tag">Exercise</span>
+            <span class="tip-tag">Health</span>
+          </div>
+        </div>
+        <div class="tip-card">
+          <div class="tip-number">02</div>
+          <h3>Fresh Water Always</h3>
+          <p>Keep fresh, clean water available at all times. Change the water daily and clean the bowl regularly to prevent bacteria buildup.</p>
+          <div class="tip-tags">
+            <span class="tip-tag">Hydration</span>
+            <span class="tip-tag">Basic Care</span>
+          </div>
+        </div>
+        <div class="tip-card">
+          <div class="tip-number">03</div>
+          <h3>Regular Grooming</h3>
+          <p>Brush your pet regularly to prevent matting and reduce shedding. This also helps you check for any skin issues or parasites early.</p>
+          <div class="tip-tags">
+            <span class="tip-tag">Grooming</span>
+            <span class="tip-tag">Prevention</span>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-controls">
+        <button class="carousel-btn prev">←</button>
+        <div class="carousel-dots">
+          <span class="dot active"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+        </div>
+        <button class="carousel-btn next">→</button>
+      </div>
+    </section>
+
+    <!-- Pet Community -->
+    <section style="margin-top:40px">
+      <h2>🤝 Pet Community</h2>
+      <p style="color:var(--muted); margin-top:4px">Connect with other pet owners and share experiences</p>
+      <div class="community-features">
+        <div class="community-card">
+          <div class="community-icon">📸</div>
+          <h3>Photo Contests</h3>
+          <p>Share your pet's cutest moments and win amazing prizes!</p>
+          <div class="contest-info">
+            <span class="contest-prize">🏆 Monthly Prize: $500 Pet Store Credit</span>
+            <span class="contest-entries">📊 1,247 entries this month</span>
+          </div>
+          <button class="btn">Enter Contest</button>
+        </div>
+        <div class="community-card">
+          <div class="community-icon">💬</div>
+          <h3>Pet Forums</h3>
+          <p>Ask questions, share tips, and connect with fellow pet lovers.</p>
+          <div class="forum-stats">
+            <span class="forum-stat">👥 15,432 members</span>
+            <span class="forum-stat">💭 2,156 discussions</span>
+          </div>
+          <button class="btn">Join Forums</button>
+        </div>
+        <div class="community-card">
+          <div class="community-icon">📅</div>
+          <h3>Local Events</h3>
+          <p>Find pet-friendly events and meetups in your area.</p>
+          <div class="event-preview">
+            <span class="next-event">🎪 Next: Dog Park Meetup - Saturday 2PM</span>
+            <span class="event-location">📍 Central Park, Downtown</span>
+          </div>
+          <button class="btn">View Events</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>© <span id="year"></span> Furry Tails</footer>
+
+  <!-- AI Chatbot -->
+  <button class="bot-toggle" id="botToggle">💬 Ask Furry AI</button>
+  <section class="bot" id="bot">
+    <header>
+      <strong>Furry AI Assistant</strong>
+      <button id="closeBot" class="tag">✕</button>
+    </header>
+    <div class="msgs" id="msgs"></div>
+    <div class="input">
+      <button class="history-btn" id="historyBtn" title="Chat History">📚</button>
+      <button class="voice-btn" id="voiceBtn" title="Voice Input">🎤</button>
+      <input id="botInput" placeholder="Ask about pharmacy, appointments, grooming…"/>
+      <button id="botSend">Send</button>
+    </div>
+  </section>
+
+  <script>
+  window.addEventListener('load', function(){
+    let preloader = document.getElementById("preloader");
+    // Total: 0.3s loading text + 1.8s pet animation = 2.1s, then fade starts
+    setTimeout(() => {
+      preloader.style.opacity = "0";
+      // Show website 0.3s after fade starts (middle of logo disappearing)
+      setTimeout(() => {
+        preloader.style.visibility = "hidden";
+      }, 300); // website appears in middle of fade
+    }, 2100); // start fade at 2.1s (0.3s + 1.8s)
+  });
+  </script>
+  
+  <script src="js/app.js"></script>
+  <script src="js/pet-care-knowledge.js"></script>
+  <script src="js/chatbot.js"></script>
+  <script src="js/scroll-frames.js"></script>
+  <script src="js/new-sections.js"></script>
+  
+  <!-- Advanced Features -->
+  <script src="js/advanced-ai-health.js"></script>
+  <script src="js/ar-vr-commerce.js"></script>
+  <script src="js/telemedicine-platform.js"></script>
+  <script src="js/blockchain-health-records.js"></script>
+  <script src="js/pwa-system.js"></script>
+</body>
+</html>

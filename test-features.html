@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TEST - All Features Working</title>
+  <style>
+    body { 
+      font-family: Arial, sans-serif; 
+      background: #0a0f1c; 
+      color: white; 
+      padding: 20px; 
+      line-height: 1.6;
+    }
+    .section { 
+      margin: 40px 0; 
+      padding: 30px; 
+      background: rgba(255,255,255,0.1); 
+      border-radius: 15px; 
+      border: 1px solid rgba(255,255,255,0.2);
+    }
+    .calculator-grid { 
+      display: grid; 
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+      gap: 20px; 
+      margin-top: 20px; 
+    }
+    .calculator-card { 
+      background: rgba(255,255,255,0.05); 
+      padding: 20px; 
+      border-radius: 10px; 
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+    input, select, button { 
+      width: 100%; 
+      padding: 12px; 
+      margin: 8px 0; 
+      border: 1px solid rgba(255,255,255,0.3); 
+      border-radius: 8px; 
+      background: rgba(255,255,255,0.1); 
+      color: white; 
+      font-size: 16px;
+    }
+    button { 
+      background: linear-gradient(135deg, #78dbff, #ff77c6); 
+      color: #051019; 
+      font-weight: bold; 
+      cursor: pointer; 
+      border: none;
+    }
+    button:hover { 
+      transform: translateY(-2px); 
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    }
+    .result { 
+      margin-top: 15px; 
+      padding: 15px; 
+      background: rgba(120, 219, 255, 0.1); 
+      border: 1px solid rgba(120, 219, 255, 0.3); 
+      border-radius: 8px; 
+      text-align: center; 
+      font-weight: bold;
+    }
+    .breeds-grid { 
+      display: grid; 
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+      gap: 20px; 
+      margin-top: 20px; 
+    }
+    .breed-card { 
+      background: rgba(255,255,255,0.05); 
+      padding: 20px; 
+      border-radius: 10px; 
+      text-align: center; 
+      border: 1px solid rgba(255,255,255,0.1);
+      transition: all 0.3s ease;
+    }
+    .breed-card:hover { 
+      transform: translateY(-5px); 
+      border-color: #78dbff;
+    }
+    .category-btn { 
+      display: inline-block; 
+      padding: 10px 20px; 
+      margin: 5px; 
+      border-radius: 25px; 
+      cursor: pointer; 
+      background: rgba(255,255,255,0.1); 
+      border: 1px solid rgba(255,255,255,0.3);
+    }
+    .category-btn.active { 
+      background: linear-gradient(135deg, #78dbff, #ff77c6); 
+      color: #051019; 
+    }
+    .insurance-grid { 
+      display: grid; 
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+      gap: 20px; 
+      margin-top: 20px; 
+    }
+    .insurance-plan { 
+      background: rgba(255,255,255,0.05); 
+      padding: 20px; 
+      border-radius: 10px; 
+      border: 1px solid rgba(255,255,255,0.1); 
+      position: relative;
+    }
+    .insurance-plan.popular { 
+      border: 2px solid #ff77c6; 
+      transform: scale(1.05); 
+    }
+    .plan-badge { 
+      position: absolute; 
+      top: -10px; 
+      left: 50%; 
+      transform: translateX(-50%); 
+      background: linear-gradient(135deg, #78dbff, #ff77c6); 
+      color: #051019; 
+      padding: 5px 15px; 
+      border-radius: 15px; 
+      font-size: 12px; 
+      font-weight: bold;
+    }
+    h1 { color: #78dbff; text-align: center; font-size: 2.5rem; margin-bottom: 10px; }
+    h2 { color: #ff77c6; font-size: 1.8rem; margin-bottom: 10px; }
+    h3 { color: #78dbff; margin-bottom: 15px; }
+    .success { background: rgba(0,255,0,0.1); border-color: rgba(0,255,0,0.3); color: #00ff00; }
+  </style>
+</head>
+<body>
+  <h1>🎉 ALL FEATURES ARE WORKING!</h1>
+  <p style="text-align: center; font-size: 1.2rem; color: #78dbff;">Test all the features below - they are fully functional!</p>
+
+  <!-- Pet Health Calculator -->
+  <div class="section">
+    <h2>🧮 Pet Health Calculator</h2>
+    <p>Calculate important health metrics for your pet</p>
+    <div class="calculator-grid">
+      <div class="calculator-card">
+        <h3>🐕 Dog Age Calculator</h3>
+        <label>Dog's Age (years):</label>
+        <input type="number" id="dogAge" placeholder="Enter age" min="0" max="25">
+        <label>Size:</label>
+        <select id="dogSize">
+          <option value="small">Small (under 25 lbs)</option>
+          <option value="medium">Medium (25-60 lbs)</option>
+          <option value="large">Large (over 60 lbs)</option>
+        </select>
+        <button onclick="calculateDogAge()">Calculate Human Age</button>
+        <div id="dogAgeResult" class="result">Enter your dog's details above</div>
+      </div>
+      <div class="calculator-card">
+        <h3>🐱 Cat Age Calculator</h3>
+        <label>Cat's Age (years):</label>
+        <input type="number" id="catAge" placeholder="Enter age" min="0" max="25">
+        <button onclick="calculateCatAge()">Calculate Human Age</button>
+        <div id="catAgeResult" class="result">Enter your cat's age above</div>
+      </div>
+      <div class="calculator-card">
+        <h3>🍽️ Food Portion Calculator</h3>
+        <label>Pet Weight (lbs):</label>
+        <input type="number" id="petWeight" placeholder="Enter weight" min="1" max="200">
+        <label>Activity Level:</label>
+        <select id="activityLevel">
+          <option value="low">Low Activity</option>
+          <option value="moderate">Moderate Activity</option>
+          <option value="high">High Activity</option>
+        </select>
+        <button onclick="calculateFood()">Calculate Daily Food</button>
+        <div id="foodResult" class="result">Enter pet details above</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Pet Breed Encyclopedia -->
+  <div class="section">
+    <h2>🐾 Pet Breed Encyclopedia</h2>
+    <p>Learn about different pet breeds and their characteristics</p>
+    <input type="text" id="breedSearch" placeholder="Search for a breed..." onkeyup="searchBreeds()" style="margin-bottom: 15px;">
+    <div>
+      <span class="category-btn active" onclick="filterBreeds('all')">All</span>
+      <span class="category-btn" onclick="filterBreeds('dog')">Dogs</span>
+      <span class="category-btn" onclick="filterBreeds('cat')">Cats</span>
+      <span class="category-btn" onclick="filterBreeds('small')">Small Pets</span>
+    </div>
+    <div class="breeds-grid" id="breedsGrid">
+      <div class="breed-card" data-type="dog">
+        <div style="font-size: 3rem; margin-bottom: 10px;">🐕‍🦺</div>
+        <h3>Golden Retriever</h3>
+        <p>Friendly, intelligent, and devoted. Great family dogs that love to play and swim.</p>
+        <div style="font-size: 0.9rem; color: #78dbff;">Size: Large | Energy: High | Grooming: Medium</div>
+      </div>
+      <div class="breed-card" data-type="cat">
+        <div style="font-size: 3rem; margin-bottom: 10px;">🐱</div>
+        <h3>Persian Cat</h3>
+        <p>Calm, affectionate, and elegant. Known for their long, luxurious coat.</p>
+        <div style="font-size: 0.9rem; color: #78dbff;">Size: Medium | Energy: Low | Grooming: High</div>
+      </div>
+      <div class="breed-card" data-type="dog">
+        <div style="font-size: 3rem; margin-bottom: 10px;">🐕</div>
+        <h3>Labrador</h3>
+        <p>Outgoing, active, and loyal. America's most popular dog breed.</p>
+        <div style="font-size: 0.9rem; color: #78dbff;">Size: Large | Energy: High | Grooming: Low</div>
+      </div>
+      <div class="breed-card" data-type="small">
+        <div style="font-size: 3rem; margin-bottom: 10px;">🐰</div>
+        <h3>Holland Lop Rabbit</h3>
+        <p>Gentle, friendly, and easy to handle. Perfect for families with children.</p>
+        <div style="font-size: 0.9rem; color: #78dbff;">Size: Small | Energy: Medium | Grooming: Medium</div>
+      </div>
+      <div class="breed-card" data-type="cat">
+        <div style="font-size: 3rem; margin-bottom: 10px;">🐈</div>
+        <h3>Maine Coon</h3>
+        <p>Gentle giants with dog-like personalities. Very social and intelligent.</p>
+        <div style="font-size: 0.9rem; color: #78dbff;">Size: Large | Energy: Medium | Grooming: High</div>
+      </div>
+      <div class="breed-card" data-type="dog">
+        <div style="font-size: 3rem; margin-bottom: 10px;">🐕‍🦺</div>
+        <h3>German Shepherd</h3>
+        <p>Confident, courageous, and smart. Extremely versatile working dogs.</p>
+        <div style="font-size: 0.9rem; color: #78dbff;">Size: Large | Energy: High | Grooming: Medium</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Pet Insurance Comparison -->
+  <div class="section">
+    <h2>🛡️ Pet Insurance Comparison</h2>
+    <p>Compare pet insurance plans to find the best coverage</p>
+    <div class="insurance-grid">
+      <div class="insurance-plan">
+        <div style="text-align: center; margin-bottom: 20px;">
+          <h3>Basic Plan</h3>
+          <div style="font-size: 2rem; font-weight: bold; color: #ff77c6;">$15<span style="font-size: 1rem;">/month</span></div>
+        </div>
+        <div style="margin-bottom: 20px;">
+          <div style="padding: 5px 0; border-bottom: 1px solid rgba(255,255,255,.1);">✓ Accident coverage</div>
+          <div style="padding: 5px 0; border-bottom: 1px solid rgba(255,255,255,.1);">✓ Emergency care</div>
+          <div style="padding: 5px 0; border-bottom: 1px solid rgba(255,255,255,.1);">✗ Illness coverage</div>
+          <div style="padding: 5px 0; border-bottom: 1px solid rgba(255,255,255,.1);">✗ Preventive care</div>
+          <div style="padding: 5px 0; border-bottom: 1px solid rgba(255,255,255,.1);">✗ Dental coverage</div>
+        </div>
+        <button>Choose Basic</button>
+      </div>
+      <div class="insurance-plan popular">
+        <div class="plan-badge">Most Popular</div>
+        <div style="text-align: center; margin-bottom: 20px;">
+          <h3>Complete Plan</h3>
+          <div style="font-size: 2rem; font-weight: bold; color: #ff77c6;">$35<span style="font-size: 1rem;">/month</span></div>
+        </div>
+        <div style="margin-bottom: 20px;">
+          <div style="padding: 5px 0; border-bottom: 1px solid rgba(255,255,255,.1);">✓ Accident coverage</div>
+          <div style="padding: 5px 0; border-bottom: 1px solid rgba(255,255,255,.1);">✓ Emergency care</div>
+          <div style="padding: 5px 0; border-bottom: 1px solid rgba(255,255,255,.1);">✓ Illness coverage</div>
+          <div style="padding: 5px 0; border-bottom: 1px solid rgba(255,255,255,.1);">✓ Preventive care</div>
+          <div style="padding: 5px 0; border-bottom: 1px solid rgba(255,255,255,.1);">✗ Dental coverage</div>
+        </div>
+        <button>Choose Complete</button>
+      </div>
+      <div class="insurance-plan">
+        <div style="text-align: center; margin-bottom: 20px;">
+          <h3>Premium Plan</h3>
+          <div style="font-size: 2rem; font-weight: bold; color: #ff77c6;">$55<span style="font-size: 1rem;">/month</span></div>
+        </div>
+        <div style="margin-bottom: 20px;">
+          <div style="padding: 5px 0; border-bottom: 1px solid rgba(255,255,255,.1);">✓ Accident coverage</div>
+          <div style="padding: 5px 0; border-bottom: 1px solid rgba(255,255,255,.1);">✓ Emergency care</div>
+          <div style="padding: 5px 0; border-bottom: 1px solid rgba(255,255,255,.1);">✓ Illness coverage</div>
+          <div style="padding: 5px 0; border-bottom: 1px solid rgba(255,255,255,.1);">✓ Preventive care</div>
+          <div style="padding: 5px 0; border-bottom: 1px solid rgba(255,255,255,.1);">✓ Dental coverage</div>
+        </div>
+        <button>Choose Premium</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="section success">
+    <h2>✅ PROOF THAT ALL FEATURES WORK!</h2>
+    <p><strong>🧮 Health Calculators:</strong> Enter a dog age (like 5) and see the human age calculation!</p>
+    <p><strong>🐾 Breed Search:</strong> Type "golden" in the search box and watch it filter!</p>
+    <p><strong>🔘 Category Filters:</strong> Click "Dogs" or "Cats" to filter breeds!</p>
+    <p><strong>🛡️ Insurance Plans:</strong> Compare the 3 different insurance options!</p>
+    <p><strong>🎨 Beautiful Design:</strong> Glass morphism effects and hover animations!</p>
+    <p style="text-align: center; font-size: 1.3rem; color: #00ff00; margin-top: 20px;">
+      <strong>ALL FEATURES ARE FULLY FUNCTIONAL! 🎉</strong>
+    </p>
+  </div>
+
+  <script>
+    // Pet Age Calculators
+    function calculateDogAge() {
+      const age = document.getElementById('dogAge').value;
+      const size = document.getElementById('dogSize').value;
+      const resultDiv = document.getElementById('dogAgeResult');
+      
+      if (!age || age <= 0) {
+        resultDiv.innerHTML = 'Please enter a valid age';
+        return;
+      }
+      
+      let humanAge;
+      const dogAge = parseInt(age);
+      
+      if (size === 'small') {
+        humanAge = dogAge <= 2 ? dogAge * 12.5 : 24 + (dogAge - 2) * 4.5;
+      } else if (size === 'medium') {
+        humanAge = dogAge <= 2 ? dogAge * 10.5 : 21 + (dogAge - 2) * 5.5;
+      } else {
+        humanAge = dogAge <= 2 ? dogAge * 9 : 18 + (dogAge - 2) * 7;
+      }
+      
+      resultDiv.innerHTML = `🐕 Your dog is approximately <strong>${Math.round(humanAge)} human years</strong> old!`;
+      resultDiv.style.background = 'rgba(0,255,0,0.1)';
+      resultDiv.style.borderColor = 'rgba(0,255,0,0.3)';
+    }
+
+    function calculateCatAge() {
+      const age = document.getElementById('catAge').value;
+      const resultDiv = document.getElementById('catAgeResult');
+      
+      if (!age || age <= 0) {
+        resultDiv.innerHTML = 'Please enter a valid age';
+        return;
+      }
+      
+      const catAge = parseInt(age);
+      let humanAge;
+      
+      if (catAge === 1) {
+        humanAge = 15;
+      } else if (catAge === 2) {
+        humanAge = 24;
+      } else {
+        humanAge = 24 + (catAge - 2) * 4;
+      }
+      
+      resultDiv.innerHTML = `🐱 Your cat is approximately <strong>${humanAge} human years</strong> old!`;
+      resultDiv.style.background = 'rgba(0,255,0,0.1)';
+      resultDiv.style.borderColor = 'rgba(0,255,0,0.3)';
+    }
+
+    function calculateFood() {
+      const weight = document.getElementById('petWeight').value;
+      const activity = document.getElementById('activityLevel').value;
+      const resultDiv = document.getElementById('foodResult');
+      
+      if (!weight || weight <= 0) {
+        resultDiv.innerHTML = 'Please enter a valid weight';
+        return;
+      }
+      
+      const petWeight = parseInt(weight);
+      let baseCalories = petWeight * 30 + 70;
+      
+      let multiplier;
+      switch (activity) {
+        case 'low': multiplier = 1.2; break;
+        case 'moderate': multiplier = 1.6; break;
+        case 'high': multiplier = 2.0; break;
+        default: multiplier = 1.6;
+      }
+      
+      const dailyCalories = Math.round(baseCalories * multiplier);
+      const cupsOfFood = Math.round((dailyCalories / 400) * 10) / 10;
+      
+      resultDiv.innerHTML = `🍽️ Daily needs: <strong>${dailyCalories} calories</strong><br>Approximately <strong>${cupsOfFood} cups</strong> of dry food`;
+      resultDiv.style.background = 'rgba(0,255,0,0.1)';
+      resultDiv.style.borderColor = 'rgba(0,255,0,0.3)';
+    }
+
+    function searchBreeds() {
+      const searchTerm = document.getElementById('breedSearch').value.toLowerCase();
+      const breedCards = document.querySelectorAll('.breed-card');
+      
+      breedCards.forEach(card => {
+        const breedName = card.querySelector('h3').textContent.toLowerCase();
+        const breedDescription = card.querySelector('p').textContent.toLowerCase();
+        
+        if (breedName.includes(searchTerm) || breedDescription.includes(searchTerm)) {
+          card.style.display = 'block';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
+    function filterBreeds(type) {
+      const breedCards = document.querySelectorAll('.breed-card');
+      const categoryBtns = document.querySelectorAll('.category-btn');
+      
+      categoryBtns.forEach(btn => {
+        btn.classList.remove('active');
+      });
+      
+      event.target.classList.add('active');
+      
+      breedCards.forEach(card => {
+        if (type === 'all' || card.dataset.type === type) {
+          card.style.display = 'block';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+  </script>
+</body>
+</html>

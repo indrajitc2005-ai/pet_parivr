@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Scroll Frame Animation Demo - Furry Tails</title>
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/scroll-frames.css">
+  <style>
+    /* Demo-specific styles */
+    .demo-section {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+      padding: 60px 20px;
+      position: relative;
+    }
+    
+    .demo-section h2 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+      color: var(--text-heading);
+    }
+    
+    .demo-section p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      line-height: 1.6;
+      color: var(--text-muted);
+    }
+    
+    .frame-indicator {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: var(--glass);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 15px;
+      backdrop-filter: blur(10px);
+      z-index: 100;
+    }
+    
+    .frame-indicator h4 {
+      margin: 0 0 10px 0;
+      color: var(--text-heading);
+      font-size: 0.9rem;
+    }
+    
+    .frame-dots {
+      display: flex;
+      gap: 8px;
+    }
+    
+    .frame-dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: rgba(120, 219, 255, 0.3);
+      border: 1px solid rgba(120, 219, 255, 0.5);
+      transition: all 0.3s ease;
+    }
+    
+    .frame-dot.active {
+      background: var(--accent);
+      box-shadow: 0 0 15px rgba(120, 219, 255, 0.8);
+      transform: scale(1.2);
+    }
+    
+    .scroll-hint {
+      position: fixed;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      animation: bounce 2s infinite;
+    }
+    
+    @keyframes bounce {
+      0%, 20%, 50%, 80%, 100% { transform: translateX(-50%) translateY(0); }
+      40% { transform: translateX(-50%) translateY(-10px); }
+      60% { transform: translateX(-50%) translateY(-5px); }
+    }
+    
+    .demo-card {
+      background: var(--glass);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 30px;
+      margin: 20px;
+      backdrop-filter: blur(15px);
+      transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+    
+    .demo-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      max-width: 1200px;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <!-- Frame Indicator -->
+  <div class="frame-indicator">
+    <h4>Background Frame</h4>
+    <div class="frame-dots">
+      <div class="frame-dot active" data-frame="1"></div>
+      <div class="frame-dot" data-frame="2"></div>
+      <div class="frame-dot" data-frame="3"></div>
+      <div class="frame-dot" data-frame="4"></div>
+    </div>
+  </div>
+  
+  <!-- Scroll Hint -->
+  <div class="scroll-hint">
+    ↓ Scroll down to see frame animations ↓
+  </div>
+  
+  <!-- Demo Sections -->
+  <section class="demo-section">
+    <h2>Frame 1: Particle Network</h2>
+    <p>Watch as floating particles create a dynamic network background. The particles move and glow as you scroll, creating an immersive experience.</p>
+    <div class="demo-grid">
+      <div class="demo-card">
+        <h3>Dynamic Particles</h3>
+        <p>Floating elements that respond to scroll</p>
+      </div>
+      <div class="demo-card">
+        <h3>Network Effect</h3>
+        <p>Connected particle system</p>
+      </div>
+    </div>
+  </section>
+  
+  <section class="demo-section">
+    <h2>Frame 2: Geometric Patterns</h2>
+    <p>Geometric shapes and patterns emerge, creating a structured yet dynamic background that shifts and rotates as you navigate through the content.</p>
+    <div class="demo-grid">
+      <div class="demo-card">
+        <h3>Rotating Patterns</h3>
+        <p>Geometric shapes in constant motion</p>
+      </div>
+      <div class="demo-card">
+        <h3>Structured Design</h3>
+        <p>Mathematical precision meets artistry</p>
+      </div>
+      <div class="demo-card">
+        <h3>Visual Harmony</h3>
+        <p>Balanced composition and flow</p>
+      </div>
+    </div>
+  </section>
+  
+  <section class="demo-section">
+    <h2>Frame 3: Wave Patterns</h2>
+    <p>Flowing wave patterns create a sense of movement and fluidity. The waves ripple across the background, adding depth and motion to the experience.</p>
+    <div class="demo-grid">
+      <div class="demo-card">
+        <h3>Fluid Motion</h3>
+        <p>Waves that flow across the screen</p>
+      </div>
+      <div class="demo-card">
+        <h3>Depth Layers</h3>
+        <p>Multiple wave layers for depth</p>
+      </div>
+    </div>
+  </section>
+  
+  <section class="demo-section">
+    <h2>Frame 4: Hexagon Grid</h2>
+    <p>A sophisticated hexagonal grid pattern pulses and breathes, creating a high-tech atmosphere perfect for the futuristic pet care theme.</p>
+    <div class="demo-grid">
+      <div class="demo-card">
+        <h3>Hexagonal Grid</h3>
+        <p>Geometric precision and beauty</p>
+      </div>
+      <div class="demo-card">
+        <h3>Pulsing Effect</h3>
+        <p>Breathing animation for life</p>
+      </div>
+      <div class="demo-card">
+        <h3>Tech Aesthetic</h3>
+        <p>Futuristic design language</p>
+      </div>
+    </div>
+  </section>
+  
+  <section class="demo-section">
+    <h2>Animation Complete</h2>
+    <p>You've experienced all four background frames! Each frame builds upon the previous one, creating a layered and immersive scrolling experience.</p>
+    <div style="margin-top: 40px;">
+      <button class="btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+        ↑ Back to Top
+      </button>
+      <a href="index.html" class="btn ghost" style="margin-left: 20px;">
+        ← Back to Main Site
+      </a>
+    </div>
+  </section>
+  
+  <script src="js/scroll-frames.js"></script>
+  <script>
+    // Update frame indicator
+    function updateFrameIndicator(frameNumber) {
+      const dots = document.querySelectorAll('.frame-dot');
+      dots.forEach((dot, index) => {
+        if (index + 1 === frameNumber) {
+          dot.classList.add('active');
+        } else {
+          dot.classList.remove('active');
+        }
+      });
+    }
+    
+    // Listen for frame changes
+    document.addEventListener('DOMContentLoaded', () => {
+      // Override the frame animator to update indicator
+      setTimeout(() => {
+        if (window.frameAnimator) {
+          const originalSwitchFrame = window.frameAnimator.switchBackgroundFrame;
+          window.frameAnimator.switchBackgroundFrame = function(frameNumber) {
+            originalSwitchFrame.call(this, frameNumber);
+            updateFrameIndicator(frameNumber);
+          };
+        }
+      }, 100);
+      
+      // Hide scroll hint after first scroll
+      let hasScrolled = false;
+      window.addEventListener('scroll', () => {
+        if (!hasScrolled && window.pageYOffset > 100) {
+          hasScrolled = true;
+          const hint = document.querySelector('.scroll-hint');
+          if (hint) {
+            hint.style.opacity = '0';
+            setTimeout(() => hint.remove(), 500);
+          }
+        }
+      });
+    });
+  </script>
+</body>
+</html>

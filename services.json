@@ -1,0 +1,46 @@
+[
+  {
+    "icon": "🩺",
+    "title": "Health Checkups",
+    "description": "Regular health monitoring and preventive care for optimal pet wellness.",
+    "features": [
+      "✓ Full body examination",
+      "✓ Vaccination updates",
+      "✓ Health reports"
+    ],
+    "button": "Book Checkup"
+  },
+  {
+    "icon": "✂️",
+    "title": "Professional Grooming",
+    "description": "Expert grooming services to keep your pet looking and feeling their best.",
+    "features": [
+      "✓ Nail trimming",
+      "✓ Fur styling",
+      "✓ Spa treatments"
+    ],
+    "button": "Schedule Grooming"
+  },
+  {
+    "icon": "🏠",
+    "title": "Pet Boarding",
+    "description": "Safe and comfortable boarding facilities when you're away from home.",
+    "features": [
+      "✓ 24/7 supervision",
+      "✓ Play activities",
+      "✓ Daily updates"
+    ],
+    "button": "Reserve Spot"
+  },
+  {
+    "icon": "🎓",
+    "title": "Training Programs",
+    "description": "Professional training to help your pet develop good behaviors and skills.",
+    "features": [
+      "✓ Basic obedience",
+      "✓ Behavioral correction",
+      "✓ Advanced tricks"
+    ],
+    "button": "Start Training"
+  }
+]

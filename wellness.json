@@ -1,0 +1,29 @@
+[
+  {
+    "number": "01",
+    "title": "Daily Exercise",
+    "description": "Ensure your pet gets adequate physical activity based on their breed and age. Dogs need 30 minutes to 2 hours daily, while cats benefit from 10-15 minutes of active play.",
+    "tags": [
+      "Exercise",
+      "Health"
+    ]
+  },
+  {
+    "number": "02",
+    "title": "Fresh Water Always",
+    "description": "Keep fresh, clean water available at all times. Change the water daily and clean the bowl regularly to prevent bacteria buildup.",
+    "tags": [
+      "Hydration",
+      "Basic Care"
+    ]
+  },
+  {
+    "number": "03",
+    "title": "Regular Grooming",
+    "description": "Brush your pet regularly to prevent matting and reduce shedding. This also helps you check for any skin issues or parasites early.",
+    "tags": [
+      "Grooming",
+      "Prevention"
+    ]
+  }
+]
